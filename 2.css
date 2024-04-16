@@ -15,7 +15,7 @@
     --maincolor2:rgb(246, 180, 156);
 }
 body{
-    background-image: url(http://localhost:8080/project24/weatherapi/images/bg.jpg);
+    background-image: url(images/bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
