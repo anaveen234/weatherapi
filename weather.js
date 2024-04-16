@@ -3,7 +3,7 @@ function sayHello() {
       var city = window.document.f1.city.value;
       var apikey='52fc3e030e92c51638ce749bb26f6fbc';
       var duration=window.document.f1.duration.value;
-      var apiUrl = "http://api.openweathermap.org/data/2.5/forecast?q="+city+"&type=like&units=metric&cnt="+duration*8+"&appid="+apikey+"";
+      var apiUrl = "https://api.openweathermap.org/data/2.5/forecast?q="+city+"&type=like&units=metric&cnt="+duration*8+"&appid="+apikey+"";
       postRequest(apiUrl);
       ele.style.display="none";
   };
