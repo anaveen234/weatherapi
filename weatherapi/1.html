@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Forecast</title>
+    <script>
+    function updatePage(str) {
+      
+       document.getElementById("result").innerHTML = "<font color='red' size='5'>" +str+ "</font>";
+    };
+
+    function sayHello() {
+      var city = window.document.f1.city.value;
+      var apikey='52fc3e030e92c51638ce749bb26f6fbc';
+      var apiUrl = "http://api.openweathermap.org/data/2.5/forecast?q="+city+"&type=like&units=metric&cnt=4&appid="+apikey+"";
+      postRequest(apiUrl);
+  };
+
+  function postRequest(strURL) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open('POST', strURL, true);
+    xmlHttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xmlHttp.onreadystatechange = function() {
+      if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+        updatePage(xmlHttp.responseText);
+      }
+    };
+    xmlHttp.send(null); // No data to be sent in the body for POST request
+  };
+</script>
+</head>
+<body>
+    <h1 align="center"><font color="#000080">Simple Weather</font></h1>
+    <p align="center"><font color="#000080">Enter your location</font></p>
+    <form name="f1" method="get">
+        <p align="center"><font color="#000080">&nbsp;
+        <input type="text" name="city" id="usr">
+        <input value="know weather" type="button" onclick='sayHello()' name="showdate"></font></p>
+    </form>
+    <div id="result" align="center"></div>
+</body>
+</html>

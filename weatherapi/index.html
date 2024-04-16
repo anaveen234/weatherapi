@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="weather.js"></script>
+    
+</head>
+<body>
+  
+    <h1 align="center">Simple Weather</h1>
+    
+    <form name="f1" method="get">
+      <p align="center">Know Here</p>
+        <input type="text" name="city" id="usr"placeholder="Location">
+        <input type="text" name="duration" id=""placeholder="Days">
+        
+          <div id="btn1"><button type="button" onclick="sayHello()">Get Weather</button></div>
+        
+    </form>
+    <div id="result" align="center">
+   
+    </div>
+    <div id="element"></div>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Hi there!','Get the latest weather Forecast'],
+      typeSpeed: 100,
+      loop:true
+    });
+  </script>
+</body>
+</html>
