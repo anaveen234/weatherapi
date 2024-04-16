@@ -15,7 +15,7 @@
     --maincolor2:rgb(246, 180, 156);
 }
 body{
-    background-image: url(images/bg.jpg);
+    background-image: url(bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
